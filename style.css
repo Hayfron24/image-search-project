@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'poppins';
+}
+body{
+    line-height: 1.6;
+}
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.2rem;
+}
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+}
+#search-input::placeholder{
+    opacity: 50%;
+}
+#search-btn{
+    padding: 0.625rem 1.25rem;
+    border: none;
+    background: #138065;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 75rem;
+    margin: 0 auto;
+    /* align-items: center; */
+}
+.search-result{
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+    /* flex: 1; */
+}
+.search-result img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out .3s;
+}
+.search-result img:hover{
+    opacity: .8;
+}
+.search-result a{
+    display: block;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #333;
+    padding: 0.625rem;
+    text-transform: capitalize;
+}
+#show-more-btn{
+    display: block;
+    padding: 0.625rem  1.25rem;
+    font-size: 1.2rem;
+    /* text-align: center; */
+    border: none;
+    margin: 1.875rem auto;
+    border-radius: 5px;
+    background-color: #02cddb;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .search-results{
+        padding: 1.25rem;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .search-result{
+        width: 100%;
+    }
+}
